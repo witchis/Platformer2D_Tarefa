@@ -2796,7 +2796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7222870155715831304, guid: 15933b0d0d1893f4eb479f48e48f10ff, type: 3}
       propertyPath: m_Name
-      value: PFB_Credits
+      value: PFB_Sobre
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222870155715831304, guid: 15933b0d0d1893f4eb479f48e48f10ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7331943192153869981, guid: 15933b0d0d1893f4eb479f48e48f10ff, type: 3}
       propertyPath: m_Pivot.x
@@ -2872,7 +2876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9132361516413321853, guid: 15933b0d0d1893f4eb479f48e48f10ff, type: 3}
       propertyPath: m_text
-      value: Credits
+      value: Sobre
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

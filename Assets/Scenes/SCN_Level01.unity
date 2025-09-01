@@ -2752,7 +2752,7 @@ MonoBehaviour:
   - {fileID: 783515200}
   startPoint: {fileID: 390938705}
   duration: 0.5
-  delay: 1
+  delay: 0.5
   ease: 27
 --- !u!4 &1597485883
 Transform:

@@ -17,7 +17,7 @@ public class GameManager : Singleton<GameManager>
 
     [Header("Animation")]
     public float duration = .5f;
-    public float delay = 1f;
+    public float delay = .5f;
     public Ease ease = Ease.OutBack;
 
     private GameObject _currentPlayer;
