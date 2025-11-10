@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
+    public HealthBase healthBase;
 
     [Header("Speed Setup")]
     public Vector2 friction = new Vector2(-.1f, 0);
@@ -22,6 +23,21 @@ public class Player : MonoBehaviour
     [Header("Animation Player")]
     public Animator animator;
     public string boolRun = "Run";
+    public string triggerDeath = "Death";
+
+    private void Awake()
+    {
+        if (healthBase != null)
+        {
+            healthBase.OnKill += OnPlayerDeath;
+        }
+    }
+
+    private void OnPlayerDeath()
+    {
+        healthBase.OnKill -= OnPlayerDeath;
+        animator.SetTrigger(triggerDeath);
+    }
 
     private void Update()
     {
@@ -88,6 +104,11 @@ public class Player : MonoBehaviour
 
         myRigidbody.transform.DOScaleY(jumpScaleY, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
         myRigidbody.transform.DOScaleX(jumpScaleX * Mathf.Sign(currentScaleX), animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+    }
+
+    public void DestroyMe()
+    {
+        Destroy(gameObject);
     }
 }
 
