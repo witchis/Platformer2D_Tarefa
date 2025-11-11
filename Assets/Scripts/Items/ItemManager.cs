@@ -6,30 +6,27 @@ using UnityEngine;
 
 public class ItemManager : Singleton<ItemManager>
 {
-    public int coins;
-
-    public TextMeshProUGUI coinCountText;
+    public SOInt coins;
+    public SOInt gems;
 
     private void Start()
     {
         Reset();
-        UpdateCoinText(0);
     }
 
     private void Reset()
     {
-        coins = 0;
-        UpdateCoinText(coins);
+        coins.value = 0;
+        gems.value = 0;
     }
 
     public void AddCoins(int amount = 1)
     {
-        coins += amount;
-        UpdateCoinText(coins);
+        coins.value += amount;
     }
 
-    public void UpdateCoinText(int coinCount)
+    public void AddGems(int amount = 1)
     {
-        coinCountText.text = $"x {coinCount}";
+        gems.value += amount;
     }
 }
