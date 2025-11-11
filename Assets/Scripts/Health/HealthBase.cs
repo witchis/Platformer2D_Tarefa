@@ -10,7 +10,7 @@ public class HealthBase : MonoBehaviour
 
     public int startLife = 10;
 
-    public bool destroyOnKill = true;
+    public bool destroyOnKill = false;
     public float delayToKill = 1f;
 
     private int _currentLife;
