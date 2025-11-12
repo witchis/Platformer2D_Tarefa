@@ -5,6 +5,12 @@ using UnityEngine;
 public class ItemCollectibleBase : MonoBehaviour
 {
     public string compareTag = "Player";
+    public new ParticleSystem particleSystem;
+
+    private void Awake()
+    {
+        if (particleSystem != null) particleSystem.transform.SetParent(null);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,5 +26,8 @@ public class ItemCollectibleBase : MonoBehaviour
         OnCollect();
     }
 
-    protected virtual void OnCollect() { }
+    protected virtual void OnCollect()
+    {
+        if (particleSystem != null) particleSystem.Play();
+    }
 }

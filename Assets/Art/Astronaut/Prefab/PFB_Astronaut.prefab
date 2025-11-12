@@ -1052,6 +1052,8 @@ MonoBehaviour:
   myRigidbody: {fileID: 5279106347317979546}
   healthBase: {fileID: 7390365368307074647}
   SOPlayerSetup: {fileID: 11400000, guid: 25478f3e2ee40f14d854b00e0f5f37ad, type: 2}
+  distToGround: 0
+  spaceToGround: 0.1
 --- !u!114 &7390365368307074647
 MonoBehaviour:
   m_ObjectHideFlags: 0
